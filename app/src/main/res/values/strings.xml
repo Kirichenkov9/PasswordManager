@@ -3,4 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_generate">Generate</string>
     <string name="title_add">Add</string>
+    <string name="main_info">Main Information</string>
+    <string name="website">Website</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="notes">Notes</string>
 </resources>

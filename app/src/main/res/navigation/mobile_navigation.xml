@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.password.ui.home.HomeFragment"
+        android:name="com.example.password.view.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_generate"
-        android:name="com.example.password.ui.dashboard.GeneratePasswordFragment"
+        android:name="com.example.password.view.GeneratePasswordFragment"
         android:label="@string/title_generate"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_generate" />
 
     <fragment
         android:id="@+id/navigation_add"
-        android:name="com.example.password.ui.notifications.AddPassFragment"
+        android:name="com.example.password.view.AddPassFragment"
         android:label="@string/title_add"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_add_password" />
 </navigation>

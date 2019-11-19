@@ -20,7 +20,7 @@ class AddPassFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_add_password, container, false)
+        return inflater.inflate(R.layout.fragment_add, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

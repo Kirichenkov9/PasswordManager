@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name_edt"
@@ -22,15 +22,15 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:hint="@string/name"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/website_edt"
@@ -41,14 +41,15 @@
                 android:hint="@string/website"
                 android:inputType="textWebEditText"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username_edt"
@@ -59,7 +60,8 @@
                 android:hint="@string/username"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,7 +69,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -79,14 +81,16 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/notes_edt"
@@ -96,7 +100,8 @@
                 android:layout_marginEnd="15dp"
                 android:hint="@string/notes"
                 android:imeOptions=""
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

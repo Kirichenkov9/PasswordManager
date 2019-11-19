@@ -21,5 +21,5 @@
         android:id="@+id/navigation_add"
         android:name="com.example.password.view.AddPassFragment"
         android:label="@string/title_add"
-        tools:layout="@layout/fragment_add_password" />
+        tools:layout="@layout/fragment_add" />
 </navigation>

@@ -9,4 +9,11 @@
     <string name="password">Password</string>
     <string name="username">Username</string>
     <string name="notes">Notes</string>
+    <string name="generate_password">Generate password</string>
+    <string name="password_length">Password length</string>
+    <string name="uppercase_letters">Uppercase letters (A-Z)</string>
+    <string name="lowercase_letters">Lowercase letters (a-z)</string>
+    <string name="digits_0_9">Digits (0-9)</string>
+    <string name="special_symbols">Special symbols</string>
+    <string name="list_special_symbols"><![CDATA[~!@#$%^&*+-/.,{}[]()]]></string>
 </resources>

@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_generate"
-        android:name="com.example.password.view.GeneratePasswordFragment"
+        android:name="com.example.password.view.GenerateFragment"
         android:label="@string/title_generate"
         tools:layout="@layout/fragment_generate" />
 

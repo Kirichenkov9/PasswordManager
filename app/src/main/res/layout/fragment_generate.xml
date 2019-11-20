@@ -39,57 +39,36 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            style="@style/CheckBoxStyle"
             android:text="@string/password_length" />
 
         <Spinner
             android:id="@+id/password_length_spn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp" />
+            style="@style/CheckBoxStyle" />
 
         <CheckBox
             android:id="@+id/uppercase_ckb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            style="@style/CheckBoxStyle"
             android:text="@string/uppercase_letters" />
 
         <CheckBox
             android:id="@+id/lowercase_ckb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            style="@style/CheckBoxStyle"
             android:text="@string/lowercase_letters" />
 
         <CheckBox
             android:id="@+id/digit_ckb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            style="@style/CheckBoxStyle"
             android:text="@string/digits_0_9" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            style="@style/CheckBoxStyle"
             android:text="@string/special_symbols" />
 
 
         <CheckBox
             android:id="@+id/special_symbol_ckb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            style="@style/CheckBoxStyle"
             android:text="@string/list_special_symbols" />
 
     </LinearLayout>

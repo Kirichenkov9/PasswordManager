@@ -16,4 +16,5 @@
     <string name="digits_0_9">Digits (0–9)</string>
     <string name="special_symbols">Special symbols</string>
     <string name="list_special_symbols"><![CDATA[~!@#$%^&*+-/.,{}[]()]]></string>
+    <string name="create">Готово</string>
 </resources>

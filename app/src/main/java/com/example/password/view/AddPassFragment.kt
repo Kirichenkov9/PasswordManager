@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.password.R
 
+
 class AddPassFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -23,8 +24,5 @@ class AddPassFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_add, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        Log.d("LOL", "addOnViewCreated")
-    }
+
 }

@@ -4,25 +4,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.example.password.R
-import kotlinx.android.synthetic.main.fragment_generate.*
+import kotlinx.android.synthetic.main.fragment_create_password.*
 
-class GenerateFragment : Fragment() {
+
+class CreatePasswordFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_generate, container, false)
+        return inflater.inflate(R.layout.fragment_create_password, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as AppCompatActivity).setSupportActionBar(toolbar_generate as Toolbar?)
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_generate)
+
+        toolbar_add.title = getString(R.string.title_create)
     }
 }

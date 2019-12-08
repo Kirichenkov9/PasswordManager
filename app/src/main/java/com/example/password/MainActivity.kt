@@ -3,7 +3,7 @@ package com.example.password
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.password.view.AddPassFragment
+import com.example.password.view.CreatePasswordFragment
 import com.example.password.view.GenerateFragment
 import com.example.password.view.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_add -> {
-                val addPassFragment = AddPassFragment()
+                val addPassFragment = CreatePasswordFragment()
                 openFragment(addPassFragment)
                 return@OnNavigationItemSelectedListener true
             }

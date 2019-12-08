@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.password.R
+import com.example.password.model.Note
 import kotlinx.android.synthetic.main.list_item_view.view.*
 
 
-class MyAdapter(private val myDataset: Array<String>) :
+class MyAdapter(private val notes: Array<Note>) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -23,12 +24,14 @@ class MyAdapter(private val myDataset: Array<String>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.textView.text = myDataset[position]
+        holder.title.text = notes[position].title
+        holder.userName.text = notes[position].username
     }
 
-    override fun getItemCount() = myDataset.size
+    override fun getItemCount() = notes.size
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = itemView.text
+        val title: TextView = itemView.title_item
+        val userName: TextView = itemView.username_item
     }
 }

@@ -1,11 +1,9 @@
-package com.example.password
+package com.example.password.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.password.view.CreatePasswordFragment
-import com.example.password.view.GenerateFragment
-import com.example.password.view.HomeFragment
+import com.example.password.R
 import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -44,8 +42,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, fragment)
-        transaction.commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

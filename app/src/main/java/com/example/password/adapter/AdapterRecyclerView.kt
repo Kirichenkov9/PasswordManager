@@ -4,15 +4,16 @@ package com.example.password.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.password.R
 import com.example.password.model.Note
 import kotlinx.android.synthetic.main.list_item_view.view.*
 
 
-class MyAdapter(private val notes: Array<Note>) :
+class MyAdapter(private val listener: OnNoteSelected) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+
+    var notes: ArrayList<Note> = ArrayList()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -24,14 +25,29 @@ class MyAdapter(private val notes: Array<Note>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.title.text = notes[position].title
-        holder.userName.text = notes[position].username
+        holder.bind(notes[position], listener)
     }
 
     override fun getItemCount() = notes.size
 
-    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val title: TextView = itemView.title_item
-        val userName: TextView = itemView.username_item
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+
+        private lateinit var listener: OnNoteSelected
+
+        fun bind(note: Note, listener: OnNoteSelected) {
+            itemView.title_item.text = note.title
+            itemView.username_item.text = note.username
+
+            this.listener = listener
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            listener.onNoteSelected(adapterPosition)
+        }
+    }
+
+    interface OnNoteSelected {
+        fun onNoteSelected(position: Int)
     }
 }

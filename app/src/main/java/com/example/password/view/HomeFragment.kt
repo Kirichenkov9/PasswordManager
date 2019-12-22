@@ -13,8 +13,9 @@ import com.example.password.R
 import com.example.password.adapter.MyAdapter
 import com.example.password.model.Note
 import kotlinx.android.synthetic.main.fragment_home.*
+import java.util.*
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), MyAdapter.OnNoteSelected {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,13 +30,21 @@ class HomeFragment : Fragment() {
         (activity as AppCompatActivity).setSupportActionBar(toolbar_home as Toolbar?)
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_home)
 
-        val Item = Note("qjqj", "", "ananan", "", "")
-        val myDataset: Array<Note> = Array(9) { Item }
-        val viewAdapter = MyAdapter(myDataset)
+        val myDataset: Array<Note> = Array(9) { Note("Note$it", "", "ajakak@mai.ru", "", "") }
+        val viewAdapter = MyAdapter(this)
+        viewAdapter.notes = ArrayList(myDataset.asList())
 
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         recyclerView.adapter = viewAdapter
+    }
+
+
+    override fun onNoteSelected(position: Int) {
+        fragmentManager?.beginTransaction()
+            ?.replace(R.id.container, NoteFragment())
+            ?.addToBackStack(null)
+            ?.commit()
     }
 }
